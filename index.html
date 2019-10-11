@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="header">XKCD Password Generator</h1>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="actions.js"></script>
+        <main>
+            <!--Max Length-->
+            <div>
+                <label for="max-length">Maximum Length of the Password</label>
+                <input type="text" id="max-length" oninput="displayPassword()">
+            </div>
+
+            <!--Maximum of Word Length-->
+            <div>
+                <label for="max-word">Max Word Length</label>
+                <select id="max-select" class="addSpace" onchange="displayPassword()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+
+            <!--Minimum of Word Length-->
+            <div>
+                <label for="min-word">Min Word Length</label>
+                <select id="min-select" class="addSpace" onchange="displayPassword()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <!--Select Number Substitutions-->
+            <div>
+                <input id="numSub" class="addSpace" type="checkbox" name="numSub" value="yes" onchange="displayPassword()"> Number
+                Substitutions
+            </div>
+
+            <!--Select Easy Typing-->
+            <div>
+                <input id="easyType" class="addSpace" type="checkbox" name="easyType" value="yes" onchange="displayPassword()"> Easy Typing
+            </div>
+
+            <!--Submit Button-->
+            <div>
+                <button id="submitButt" class="addSpace" onclick="displayPassword()">Submit</button>
+            </div>
+
+        </main>
+        <p id="tableID" class="addSpace">Table of Password</p>
+        
+        <!--Table Output-->
+        <table id="outputTable"></table>
+    </body>
+</html>
